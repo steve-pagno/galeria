@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/main.js" defer></script>
+    <link rel="shortcut icon" href="img/icone.png" type="image x-icon">
+    <title>Galeria</title>
+</head>
+
+<body>
+    <h1>Galeria de Imagens</h1>
+    <div class="container">
+        <!-- Divs com as imagens para o efeito Carousel -->
+        <div class="trocarImagens img">
+            <div class="nImagem">1 / 6</div>
+            <img src="img/01.webp">
+        </div>
+
+        <div class="trocarImagens img">
+            <div class="nImagem">2 / 6</div>
+            <img src="img/02.webp">
+        </div>
+
+        <div class="trocarImagens img">
+            <div class="nImagem">3 / 6</div>
+            <img src="img/03.png">
+        </div>
+
+        <div class="trocarImagens img">
+            <div class="nImagem">4 / 6</div>
+            <img src="img/04.jpg">
+        </div>
+
+        <div class="trocarImagens img">
+            <div class="nImagem">5 / 6</div>
+            <img src="img/05.jpg">
+        </div>
+
+        <div class="trocarImagens img">
+            <div class="nImagem">6 / 6</div>
+            <img src="img/06.jpg">
+        </div>
+
+        <!-- Botões de próximo e anterior -->
+        <button class="anterior" onclick="botoes(-1)">Anterior</button>
+        <button class="proximo" onclick="botoes(1)">Próximo</button>
+    </div>
+    <br>
+    <!-- Indicador de imagens -->
+    <div id="indicadores">
+        <span class="indicador" onclick="imgAtual(1)"></span>
+        <span class="indicador" onclick="imgAtual(2)"></span>
+        <span class="indicador" onclick="imgAtual(3)"></span>
+        <span class="indicador" onclick="imgAtual(4)"></span>
+        <span class="indicador" onclick="imgAtual(5)"></span>
+        <span class="indicador" onclick="imgAtual(6)"></span>
+    </div>
+    <h1>Steve Pagno</h1>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+/* Aplica uma fonte externa */
+@font-face {
+    font-family: Delight;
+    src: url('Delight\ Sunset.ttf');
+}
+
+/* Inclui a largura e a altura das bordas e do preenchimento no cálculo total das dimensões do elemento */
+* {
+    box-sizing: border-box;
+}
+
+/* Aplica a cor de fundo */
+body {
+    background: linear-gradient(to right, #000000, #0000ff);
+}
+
+/*Mudar a barra de rolagem*/
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #0000ff;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,255,1) 0%);
+    border-radius: 20px;
+    border: 3px solid white;
+}
+
+/* Aplica fonte, tamanho, cor e centraliza a tag h1 */
+h1 {
+    text-align: center;
+    font-family: Delight;
+    font-size: 300%;
+    color: #4679fc;
+}
+
+/* Limita o tamanho das imagens */
+img {
+    width: 750px;
+    height: 500px;
+    border: 3px solid white;
+}
+
+/* Centraliza os indicadores das imagens */
+#indicadores {
+    text-align: center;
+}
+
+/* Conteiner com as Imagens */
+.container {
+    max-width: 750px;
+    position: relative;
+    margin: auto;
+}
+
+/* Ocultar as imagens */
+.trocarImagens {
+    display: none;
+}
+
+/* Botões de Próximo e Anterior */
+.proximo,
+.anterior {
+    cursor: pointer;
+    position: absolute;
+    top: 92%;
+    width: auto;
+    margin-top: 0px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Posiciona o Botão de Próximo à direita */
+.proximo {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Passando o mouse, irá adicionar um fundo aos botões */
+.anterior:hover,
+.proximo:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: rgb(255, 255, 255);
+}
+
+/* Número da imagem (1/6 etc) */
+.nImagem {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Indicadores de imagem */
+.indicador {
+    cursor: pointer;
+    height: 5px;
+    width: 50px;
+    margin: 0 2px;
+    background-color: #bbb;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.indicador:hover {
+    background-color: #717171;
+}
+
+/* Animação de troca */
+.img {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
